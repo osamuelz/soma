@@ -738,3 +738,410 @@ a {
   color: var(--color-text-secondary);
 }
 
+/* ==========================================================================
+   4. DEMONSTRAÇÃO INTERATIVA
+   ========================================================================== */
+
+.demo-section {
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+
+.demo-panel {
+  max-width: 760px;
+  margin-inline: auto;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-panel);
+  padding: clamp(1.35rem, 4vw, 2.5rem);
+  box-shadow: var(--shadow-card);
+}
+
+.demo-status-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: clamp(1.15rem, 2.5vw, 1.5rem);
+  margin-bottom: var(--space-6);
+}
+
+.demo-status-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.demo-counter {
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.demo-message {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.2rem;
+  transition: color var(--transition-fast);
+}
+
+.demo-percentage-badge {
+  background-color: var(--color-yellow-soft);
+  color: var(--color-text-primary);
+  font-size: 0.95rem;
+  font-weight: 800;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
+  flex-shrink: 0;
+}
+
+.demo-progress-track {
+  width: 100%;
+  height: 12px;
+  background-color: var(--color-green-soft);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.demo-progress-fill {
+  width: 0%;
+  height: 100%;
+  background-color: var(--color-green-primary);
+  border-radius: var(--radius-pill);
+  transition: width var(--transition-smooth);
+}
+
+/* Lista interativa de hábitos */
+.demo-list-region {
+  margin-bottom: var(--space-6);
+}
+
+.habit-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.habit-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  background-color: var(--color-bg);
+  border: 1.5px solid var(--color-border);
+  border-radius: 22px;
+  padding: 0.85rem 1rem;
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.habit-item.is-completed {
+  background-color: var(--color-green-soft);
+  border-color: rgba(53, 94, 59, 0.3);
+}
+
+.habit-label {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+  padding-block: 0.15rem;
+}
+
+/* Checkbox acessível com aparência personalizada */
+.habit-checkbox-wrap {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.habit-checkbox {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.habit-checkbox-visual {
+  width: 26px;
+  height: 26px;
+  border-radius: 9px;
+  border: 2px solid var(--color-green-primary);
+  background-color: var(--color-surface);
+  color: var(--color-surface);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.habit-checkbox-visual svg {
+  opacity: 0;
+  transform: scale(0.65);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.habit-checkbox:checked + .habit-checkbox-visual {
+  background-color: var(--color-green-primary);
+  border-color: var(--color-green-primary);
+  transform: scale(1.04);
+}
+
+.habit-checkbox:checked + .habit-checkbox-visual svg {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.habit-checkbox:focus-visible + .habit-checkbox-visual {
+  outline: 3px solid var(--color-green-primary);
+  outline-offset: 3px;
+}
+
+.habit-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 13px;
+  background-color: var(--color-surface);
+  color: var(--color-green-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid var(--color-border);
+}
+
+.habit-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.habit-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  overflow-wrap: anywhere;
+  transition: color var(--transition-fast);
+}
+
+/* Não depende apenas de cor para indicar conclusão: adiciona selo textual e traço sutil */
+.habit-item.is-completed .habit-title {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: var(--color-green-primary);
+}
+
+.habit-state-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.18rem 0.6rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-surface);
+  color: var(--color-green-primary);
+  border: 1px solid rgba(53, 94, 59, 0.22);
+}
+
+.habit-remove-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.habit-remove-btn:hover {
+  background-color: var(--color-surface);
+  color: var(--color-error-text);
+  border-color: var(--color-error-border);
+}
+
+/* Estado vazio */
+.empty-state {
+  background-color: var(--color-bg);
+  border: 1.5px dashed var(--color-border-strong);
+  border-radius: var(--radius-card);
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+}
+
+.empty-state-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  background-color: var(--color-green-soft);
+  color: var(--color-green-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  margin-bottom: var(--space-3);
+}
+
+.empty-state-title {
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.empty-state-text {
+  font-size: 0.94rem;
+  color: var(--color-text-secondary);
+  max-width: 44ch;
+  margin-inline: auto;
+}
+
+/* Formulário de novo hábito */
+.habit-form {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-5);
+}
+
+.habit-form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.habit-form-label {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.habit-slot-counter {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+}
+
+.habit-form-row {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.habit-input-wrap {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.habit-input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.75rem 4rem 0.75rem 1.15rem;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--color-border-strong);
+  background-color: var(--color-bg);
+  font-size: 0.96rem;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.habit-input::placeholder {
+  color: var(--color-text-secondary);
+  opacity: 0.8;
+}
+
+.habit-input:focus {
+  background-color: var(--color-surface);
+  border-color: var(--color-green-primary);
+}
+
+.habit-input[aria-invalid="true"] {
+  border-color: var(--color-error-text);
+  background-color: var(--color-error-bg);
+}
+
+.habit-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.char-counter {
+  position: absolute;
+  right: 1rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  pointer-events: none;
+}
+
+.habit-form-meta {
+  margin-top: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.habit-form-help {
+  font-size: 0.83rem;
+  color: var(--color-text-secondary);
+}
+
+.habit-feedback {
+  font-size: 0.88rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  min-height: 0;
+}
+
+.habit-feedback:not(:empty) {
+  padding: 0.55rem 0.9rem;
+}
+
+.habit-feedback.is-error {
+  background-color: var(--color-error-bg);
+  color: var(--color-error-text);
+  border: 1px solid var(--color-error-border);
+}
+
+.habit-feedback.is-success {
+  background-color: var(--color-green-soft);
+  color: var(--color-text-primary);
+}
+
+.demo-storage-note {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+}
+
+.demo-storage-note svg {
+  flex-shrink: 0;
+  color: var(--color-green-primary);
+}
+

@@ -234,6 +234,108 @@
       </div>
     </section>
 
+    <!-- 4. DEMONSTRAÇÃO INTERATIVA -->
+    <section class="demo-section section-reveal" id="experimente" aria-labelledby="demo-title">
+      <div class="container">
+        <div class="section-header demo-header">
+          <span class="section-tag">Demonstração interativa</span>
+          <h2 id="demo-title" class="section-title">Experimente um dia com SOMA.</h2>
+          <p class="section-subtitle">Marque os hábitos abaixo e veja cada pequena ação somar.</p>
+        </div>
+
+        <div class="demo-panel">
+          <!-- Cabeçalho de progresso do painel -->
+          <div class="demo-status-card" aria-live="polite" aria-atomic="true">
+            <div class="demo-status-top">
+              <div>
+                <p class="demo-counter" id="demo-counter">0 de 3 hábitos concluídos</p>
+                <p class="demo-message" id="demo-message">Comece pequeno. O primeiro passo já conta.</p>
+              </div>
+              <div class="demo-percentage-badge" id="demo-percentage">0%</div>
+            </div>
+
+            <div
+              class="demo-progress-track"
+              id="demo-progressbar"
+              role="progressbar"
+              aria-label="Progresso dos hábitos de hoje"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="0"
+            >
+              <div class="demo-progress-fill" id="demo-progress-fill"></div>
+            </div>
+          </div>
+
+          <!-- Lista de hábitos -->
+          <div class="demo-list-region">
+            <ul class="habit-list" id="habit-list" aria-label="Hábitos do dia"></ul>
+
+            <!-- Estado vazio (exibido quando todos os hábitos são removidos) -->
+            <div class="empty-state" id="empty-state" hidden>
+              <div class="empty-state-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9" />
+                  <line x1="12" y1="8" x2="12" y2="16" />
+                  <line x1="8" y1="12" x2="16" y2="12" />
+                </svg>
+              </div>
+              <p class="empty-state-title">Sua lista está vazia por enquanto.</p>
+              <p class="empty-state-text">
+                Use o campo abaixo para adicionar seu primeiro hábito do dia — escolha algo simples e gentil.
+              </p>
+            </div>
+          </div>
+
+          <!-- Formulário para adicionar novo hábito -->
+          <form class="habit-form" id="habit-form" novalidate>
+            <div class="habit-form-header">
+              <label class="habit-form-label" for="habit-input">Novo hábito</label>
+              <span class="habit-slot-counter" id="habit-slot-counter" aria-live="polite">3 de 6 hábitos</span>
+            </div>
+
+            <div class="habit-form-row">
+              <div class="habit-input-wrap">
+                <input
+                  type="text"
+                  id="habit-input"
+                  name="habitName"
+                  class="habit-input"
+                  placeholder="Ex.: Anotar uma gratidão do dia"
+                  maxlength="60"
+                  autocomplete="off"
+                  aria-describedby="habit-form-help habit-feedback"
+                />
+                <span class="char-counter" id="char-counter" aria-hidden="true">0/60</span>
+              </div>
+              <button type="submit" class="btn btn-primary habit-submit-btn" id="habit-submit-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+                <span>Adicionar</span>
+              </button>
+            </div>
+
+            <div class="habit-form-meta">
+              <p class="habit-form-help" id="habit-form-help">
+                Até 6 hábitos por dia (máximo de 60 caracteres por nome).
+              </p>
+              <p class="habit-feedback" id="habit-feedback" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+
+          <p class="demo-storage-note">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="11" width="18" height="10" rx="3" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+            <span>Demonstração local. Quando disponível, o progresso fica salvo neste navegador.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
       </main>
   <script src="./js/main.js"></script>
 </body>
