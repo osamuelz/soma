@@ -1,0 +1,23 @@
+name: Validate site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Check JavaScript syntax
+        run: node --check js/main.js
+      - name: Check patch whitespace
+        run: git show --format= --check HEAD
+      - name: Check publish helper syntax
+        run: bash -n push_to_github.sh
