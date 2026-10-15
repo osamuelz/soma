@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://osamuelz.github.io/soma/sitemap.xml
