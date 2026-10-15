@@ -65,6 +65,120 @@
   </header>
 
   <main id="conteudo-principal">
+    <!-- 2. APRESENTAÇÃO PRINCIPAL -->
+    <section class="hero-section section-reveal" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            Uma rotina melhor começa aos poucos.
+          </p>
+          <h1 id="hero-title" class="hero-title">
+            Pequenos hábitos.<br />
+            Grandes mudanças.
+          </h1>
+          <p class="hero-description">
+            Crie espaço para o que faz bem. Acompanhe suas pequenas conquistas e construa uma rotina no seu ritmo.
+          </p>
+          <div class="hero-actions">
+            <a href="#experimente" class="btn btn-primary">Experimente o SOMA</a>
+            <a href="#como-funciona" class="btn btn-secondary">Como funciona</a>
+          </div>
+        </div>
+
+        <!-- Prévia visual ilustrativa do aplicativo (HTML/CSS puro, sem controles interativos falsos) -->
+        <div class="hero-visual" role="region" aria-label="Prévia do aplicativo">
+          <div class="preview-label-wrap">
+            <span class="preview-caption">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="4" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+              Prévia do aplicativo
+            </span>
+          </div>
+
+          <div class="preview-stage">
+            <!-- Elemento sobreposto 1: Card flutuante de resumo de ritmo -->
+            <div class="preview-float preview-float-top" aria-hidden="true">
+              <span class="float-badge-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3v3m0 12v3M5.6 5.6l2.1 2.1m8.6 8.6l2.1 2.1M3 12h3m12 0h3M5.6 18.4l2.1-2.1m8.6-8.6l2.1-2.1" />
+                  <circle cx="12" cy="12" r="4" />
+                </svg>
+              </span>
+              <div class="float-badge-text">
+                <span class="float-badge-title">Ritmo da manhã</span>
+                <span class="float-badge-sub">2 de 3 ações concluídas</span>
+              </div>
+            </div>
+
+            <!-- Painel principal arredondado -->
+            <div class="preview-card">
+              <div class="preview-header">
+                <div>
+                  <p class="preview-greeting">Bom dia, Marina</p>
+                  <p class="preview-date">Quarta-feira · Seu espaço do dia</p>
+                </div>
+                <span class="preview-pill">Hoje</span>
+              </div>
+
+              <div class="preview-progress-box">
+                <div class="preview-progress-meta">
+                  <span class="preview-progress-label">Progresso diário</span>
+                  <span class="preview-progress-count">67%</span>
+                </div>
+                <div class="preview-progress-track" aria-hidden="true">
+                  <div class="preview-progress-fill"></div>
+                </div>
+              </div>
+
+              <ul class="preview-habit-list" aria-label="Exemplo ilustrativo de hábitos">
+                <li class="preview-habit-item is-done">
+                  <span class="preview-check is-done" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </span>
+                  <span class="preview-habit-name">Respirar fundo ao acordar</span>
+                  <span class="preview-status-tag is-done">Concluído</span>
+                </li>
+                <li class="preview-habit-item is-done">
+                  <span class="preview-check is-done" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </span>
+                  <span class="preview-habit-name">Tomar água antes do café</span>
+                  <span class="preview-status-tag is-done">Concluído</span>
+                </li>
+                <li class="preview-habit-item">
+                  <span class="preview-check" aria-hidden="true"></span>
+                  <span class="preview-habit-name">Caminhar 15 minutos à tarde</span>
+                  <span class="preview-status-tag">Pendente</span>
+                </li>
+              </ul>
+
+              <div class="preview-encouragement">
+                <span class="preview-encouragement-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22c4-4 8-7.5 8-12a8 8 0 1 0-16 0c0 4.5 4 8 8 12z" />
+                  </svg>
+                </span>
+                <p>Cada pequena escolha abre espaço para um dia mais calmo.</p>
+              </div>
+            </div>
+
+            <!-- Elemento sobreposto 2: Nota suave de constância -->
+            <div class="preview-float preview-float-bottom" aria-hidden="true">
+              <span class="float-dot"></span>
+              <span class="float-note-text">Sem cobranças: constância gentil no seu tempo.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
       </main>
   <script src="./js/main.js"></script>
 </body>
