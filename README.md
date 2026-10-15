@@ -1,6 +1,8 @@
 # SOMA
 
-**Link do site:** `COLE_A_URL_DO_SITE_AQUI`
+**Link do site:** [osamuelz.github.io/soma](https://osamuelz.github.io/soma/)
+
+**Repositório:** [github.com/osamuelz/soma](https://github.com/osamuelz/soma)
 
 ## Conceito do projeto
 
@@ -52,7 +54,22 @@ O projeto usa apenas caminhos relativos e não exige nenhuma etapa de instalaç�
 2. No repositório do GitHub, acesse **Settings > Pages**.
 3. Em **Build and deployment**, selecione **Deploy from a branch**.
 4. Escolha a branch principal (`main` ou `master`) e a pasta `/ (root)` e clique em **Save**.
-5. Após a publicação, copie a URL gerada pelo GitHub Pages e substitua `COLE_A_URL_DO_SITE_AQUI` no topo deste `README.md`.
+5. A URL deste projeto é `https://osamuelz.github.io/soma/`. Ao publicar em outra conta ou renomear o repositório, atualize também o endereço em `index.html`, `robots.txt` e `sitemap.xml`.
+
+Para enviar o histórico inteiro a um repositório já criado, use Git Bash:
+
+```bash
+bash push_to_github.sh https://github.com/seu-usuario/soma.git
+```
+
+O script conta os commits automaticamente e faz um push normal, sem sobrescrever
+o histórico remoto. O fluxo `Validate site` executa verificações de sintaxe em cada
+push para `main` e em pull requests. Consulte [CONTRIBUTING.md](CONTRIBUTING.md)
+para a lista de verificações manuais.
+
+Os 14 commits recebidos no projeto original foram preservados com seus autores,
+datas e identificadores. Os commits de preparação para publicação foram adicionados
+após esse histórico.
 
 ## Funcionalidades da demonstração
 
